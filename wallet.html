@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maya Wallet</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f3f3f3;
+    display:flex;
+    justify-content:center;
+}
+
+.phone{
+    width:390px;
+    min-height:100vh;
+    background:#fff;
+}
+
+/* HEADER */
+
+.top{
+    padding:18px;
+}
+
+.user{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:15px;
+}
+
+.username{
+    font-weight:bold;
+    font-size:18px;
+}
+
+.profile{
+    width:28px;
+    height:28px;
+    background:#00C853;
+    border-radius:50%;
+}
+
+.tabs{
+    display:flex;
+    gap:15px;
+    margin-bottom:20px;
+    font-size:14px;
+}
+
+.tab{
+    color:#777;
+}
+
+.active{
+    background:#000;
+    color:#fff;
+    padding:6px 16px;
+    border-radius:20px;
+}
+
+/* BALANCE CARD */
+
+.card{
+    background:#fff;
+    border-radius:18px;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+    padding:18px;
+}
+
+.balance{
+    font-size:42px;
+    font-weight:bold;
+}
+
+.subtitle{
+    color:#666;
+    margin-top:5px;
+}
+
+.buttons{
+    display:flex;
+    gap:12px;
+    margin-top:20px;
+}
+
+.action{
+    flex:1;
+    background:#DDF8E7;
+    color:#00994C;
+    text-align:center;
+    padding:13px;
+    border-radius:12px;
+    font-weight:bold;
+}
+
+/* GRID */
+
+.grid{
+    margin-top:25px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px 10px;
+    text-align:center;
+}
+
+.item{
+    cursor:pointer;
+    text-decoration:none;
+    color:#222;
+}
+
+.icon{
+    width:54px;
+    height:54px;
+    border-radius:50%;
+    background:#F0F0F0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:auto;
+    font-size:24px;
+    transition:.2s;
+}
+
+.item:hover .icon{
+    background:#d9ffe8;
+    transform:scale(1.08);
+}
+
+.label{
+    font-size:13px;
+    margin-top:7px;
+}
+
+/* TRANSACTIONS */
+
+.transactions{
+    margin-top:25px;
+    background:#fff;
+    border-radius:18px;
+    padding:18px;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+}
+
+.heading{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:15px;
+}
+
+.green{
+    color:#00A651;
+    font-weight:bold;
+}
+
+.transaction{
+    display:flex;
+    justify-content:space-between;
+    padding:14px 0;
+    border-top:1px solid #eee;
+}
+
+.amount{
+    color:#00A651;
+    font-weight:bold;
+}
+
+.bottom{
+    position:sticky;
+    bottom:0;
+    background:white;
+    border-top:1px solid #ddd;
+    display:flex;
+    justify-content:space-around;
+    padding:12px 0;
+    margin-top:20px;
+}
+
+.bottom div{
+    text-align:center;
+    font-size:12px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="phone">
+
+<div class="top">
+
+<div class="user">
+<div class="username">@harveydj</div>
+<div class="profile"></div>
+</div>
+
+<div class="tabs">
+<div class="active">Wallet</div>
+<div class="tab">Savings</div>
+<div class="tab">Credit</div>
+<div class="tab">Loans</div>
+<div class="tab">Cards</div>
+</div>
+
+<div class="card">
+
+<div class="balance">₱0.00</div>
+<div class="subtitle">Wallet balance</div>
+
+<div class="buttons">
+<div class="action">💸 Cash In</div>
+<div class="action">↗ Send</div>
+</div>
+
+<div class="grid">
+
+<div class="item">
+<div class="icon">🏦</div>
+<div class="label">Bank</div>
+</div>
+
+<div class="item">
+<div class="icon">💳</div>
+<div class="label">Cards</div>
+</div>
+
+<!-- EASY CREDIT BUTTON -->
+<a href="index.html" class="item">
+<div class="icon">💚</div>
+<div class="label"><b>Easy Credit</b></div>
+</a>
+
+<div class="item">
+<div class="icon">🧾</div>
+<div class="label">Bills</div>
+</div>
+
+<div class="item">
+<div class="icon">📱</div>
+<div class="label">Load</div>
+</div>
+
+<div class="item">
+<div class="icon">💵</div>
+<div class="label">Transfer</div>
+</div>
+
+<div class="item">
+<div class="icon">💎</div>
+<div class="label">Crypto</div>
+</div>
+
+<div class="item">
+<div class="icon">⋯</div>
+<div class="label">More</div>
+</div>
+
+</div>
+
+</div>
+
+<div class="transactions">
+
+<div class="heading">
+<div><b>Transactions</b></div>
+<div class="green">See all</div>
+</div>
+
+<div class="transaction">
+<div>
+<b>Past Due Payment Received</b><br>
+<small>July 7, 2026</small>
+</div>
+
+<div class="amount">
++₱7,012.00
+</div>
+
+</div>
+
+<div class="transaction">
+<div>
+<b>Transfer to Wallet loan payment</b><br>
+<small>June 22, 2026</small>
+</div>
+
+<div style="font-weight:bold;">
+-₱1,500.00
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="bottom">
+
+<div>🏠<br>Home</div>
+<div>📷<br>Scan</div>
+<div>💸<br>Wallet</div>
+<div>👤<br>Profile</div>
+
+</div>
+
+</div>
+
+</body>
+</html>

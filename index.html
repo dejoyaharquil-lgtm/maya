@@ -1,0 +1,278 @@
+<div class="header">
+
+    <button onclick="location.href='wallet.html'">
+        ← Back
+    </button>
+
+
+</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maya Easy Credit UI</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f2f2f2;
+        display: flex;
+        justify-content: center;
+    }
+
+    .phone {
+        width: 360px;
+        background: #f7f7f7;
+        min-height: 100vh;
+        padding: 15px;
+    }
+
+    .header {
+        font-weight: bold;
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .tabs {
+        display: flex;
+        gap: 10px;
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+
+    .tab {
+        color: gray;
+    }
+
+    .active {
+        background: black;
+        color: white;
+        padding: 5px 12px;
+        border-radius: 20px;
+    }
+
+    .card {
+        background: white;
+        border-radius: 15px;
+        padding: 15px;
+        margin-bottom: 15px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .amount {
+        font-size: 32px;
+        font-weight: bold;
+    }
+
+    .subtext {
+        font-size: 13px;
+        color: gray;
+    }
+
+    .btn {
+        background: #66bb6a;
+        padding: 13px;
+        text-align: center;
+        border-radius: 10px;
+        margin-top: 15px;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    .label {
+        font-weight: bold;
+        font-size: 17px;
+    }
+
+    .transaction-item {
+        margin-top: 10px;
+        padding-top: 10px;
+        border-top: 1px solid #eee;
+    }
+
+    .transaction-title {
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    .transaction-date {
+        font-size: 12px;
+        color: gray;
+    }
+
+    .due-date {
+        color: #ef6c00;
+        font-weight: bold;
+        font-size: 14px;
+        margin-top: 8px;
+    }
+
+    .warning {
+        background: #fff3e0;
+        color: #ef6c00;
+        padding: 12px;
+        border-radius: 10px;
+        font-size: 13px;
+        margin-top: 12px;
+        line-height: 1.6;
+    }
+
+    .schedule {
+        margin-top: 15px;
+        border-top: 1px solid #eee;
+        padding-top: 12px;
+    }
+
+    .schedule-row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+
+    .schedule-row .amount {
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .today {
+        color: #d32f2f;
+    }
+
+    .next {
+        color: #2e7d32;
+    }
+</style>
+
+</head>
+
+<body>
+
+<div class="phone">
+
+    <div class="header">@harveydj</div>
+
+    <div class="tabs">
+        <div class="tab">Wallet</div>
+        <div class="tab">Savings</div>
+        <div class="tab">Cards</div>
+        <div class="tab">Loans</div>
+        <div class="active">Easy Credit</div>
+    </div>
+
+    <!-- EASY CREDIT -->
+    <div class="card">
+
+        <div class="label">Maya Easy Credit</div>
+
+        <div class="amount">₱20,000.00</div>
+        <div class="subtext">Outstanding balance</div>
+
+        <br>
+
+        <div class="label">Credit Status</div>
+
+        <div class="amount">₱0.00</div>
+        <div class="subtext">Available credit</div>
+
+        <div class="due-date">
+            Past Due Payment Received • July 7, 2026
+        </div>
+
+        <div class="schedule">
+
+    <div class="schedule-row">
+        <div>
+            <strong>Past Due Payment</strong><br>
+            <small>Paid on July 7, 2026</small>
+        </div>
+
+        <div class="amount" style="color:#2e7d32;">
+            ✔ ₱7,012
+        </div>
+    </div>
+
+    <div class="schedule-row">
+        <div>
+            <strong>Remaining Balance</strong><br>
+            <small>Due July 15, 2026</small>
+        </div>
+
+        <div class="amount next">
+            ₱20,000
+        </div>
+    </div>
+
+</div>
+
+        <div class="warning" style="background:#e8f5e9;color:#2e7d32;">
+    <strong>Payment Received</strong><br><br>
+
+    Your past due payment of <b>₱7,012.00</b> was successfully received on <b>July 7, 2026</b>.<br><br>
+
+    Your outstanding balance is now <b>₱20,000.00</b>, due on <b>July 15, 2026</b>. Thank you for keeping your account up to date.
+</div>
+
+        <div class="btn">
+            Pay Now
+        </div>
+
+    </div>
+
+    <!-- TRANSACTIONS -->
+
+    <div class="card">
+
+        <div class="label">Transactions</div>
+
+        <div class="transaction-item">
+            <div class="transaction-title">
+                <div class="transaction-item">
+    <div class="transaction-title">
+        Past Due Payment Received
+    </div>
+
+    <div class="subtext" style="color:#2e7d32;">
+        + ₱7,012.00
+    </div>
+
+    <div class="transaction-date">
+        July 7, 2026
+    </div>
+</div>
+                Transfer to Wallet loan payment
+            </div>
+
+            <div class="subtext">
+                - ₱1,500.00
+            </div>
+
+            <div class="transaction-date">
+                June 22, 2026 • 1:45 PM
+            </div>
+        </div>
+
+        <div class="transaction-item">
+            <div class="transaction-title">
+                Easy Credit Used
+            </div>
+
+            <div class="subtext">
+                ₱26,834.00
+            </div>
+
+            <div class="transaction-date">
+                June 22, 2026 • 10:45 PM
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
